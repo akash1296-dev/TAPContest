@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-<layout>
     <data>
-        <import type="android.view.View"/>
 
         <variable
             name="group"
-            type="" />
+            type="com.example.tapcontest.data.ContestModel" />
     </data>
-
-<com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    style="@style/CardView"
-    app:strokeWidth="1dp"
-    app:strokeColor="@color/cardview_shadow_end_color"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -40,19 +32,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
             android:layout_marginTop="8dp"
+            android:layout_marginRight="12dp"
+            android:fontFamily="sans-serif-light"
             android:includeFontPadding="false"
-            android:text="@{group.contest.title}"
+            android:text="@{group.title}"
+            android:textColor="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_contest"
-            android:fontFamily="sans-serif-light"
-            android:textColor="@color/colorAccent"
-            tools:text="Hello World"
-            />
+            tools:text="Hello World" />
 
         <TextView
             android:id="@+id/tv_subtext"
@@ -63,15 +54,14 @@
             android:layout_marginRight="8dp"
             android:ellipsize="end"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="@{group.contest.SmallDescription}"
             android:maxLines="2"
+            android:text="@{group.smallDescription}"
             app:layout_constraintEnd_toStartOf="@+id/btn_participate"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/btn_participate"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title"
-            tools:text="Hello World Hello World Hello World Hello World Hello World Hello World"
-            />
+            tools:text="Hello World Hello World Hello World Hello World Hello World Hello World" />
 
         <TextView
             android:id="@+id/btn_participate"
@@ -79,25 +69,25 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginRight="12dp"
+            android:fontFamily="casual"
+            android:padding="@dimen/cardview_default_radius"
             android:paddingStart="16dp"
             android:paddingLeft="16dp"
             android:paddingTop="16dp"
             android:paddingEnd="16dp"
             android:paddingRight="16dp"
-            android:text="@{group.btnParticipateText}"
+            android:text=""
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toRightOf="@id/tv_subtext"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_subtext"
             app:layout_constraintTop_toBottomOf="@id/tv_title"
-            tools:text="Participate"
-            android:fontFamily="casual"
-            android:padding="@dimen/cardview_default_radius"
-            />
+            tools:text="Participate" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</com.google.android.material.card.MaterialCardView>
 </layout>
+
+

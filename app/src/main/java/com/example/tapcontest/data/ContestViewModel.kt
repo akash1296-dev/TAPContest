@@ -1,10 +1,3 @@
 package com.example.tapcontest.data
 
-import androidx.lifecycle.ViewModel
-
-class ContestViewModel : ViewModel() {
-
-    private val TAG = "ContestViewModel"
-
-
-}
+class ContestViewModel(contestModel: ContestModel)
